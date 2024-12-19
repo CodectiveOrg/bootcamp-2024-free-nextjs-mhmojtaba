@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import { Vazirmatn } from "next/font/google";
 import "./globals.css";
-import { NextFont } from "next/dist/compiled/@next/font";
 
-const vazirmatn: NextFont = Vazirmatn({
-  subsets: ['latin', 'arabic'],
-  display: 'swap',
-})
+const vazirmatn = Vazirmatn({
+  subsets: ["latin", "arabic"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Doc Book | رزرو دکتر",
