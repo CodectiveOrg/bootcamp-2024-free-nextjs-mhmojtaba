@@ -1,0 +1,32 @@
+/*css reset*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+input,
+button,
+textarea,
+select,
+label,
+fieldset,
+legend,
+details,
+output,
+optgroup,
+option {
+  font: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
