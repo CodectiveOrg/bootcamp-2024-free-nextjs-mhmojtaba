@@ -74,4 +74,9 @@ a {
 body {
   background-color: var(--color-default-background);
   color: var(--color-default-forground);
+
+  > * {
+    /*max-width: var(--full-width);*/
+    padding-inline: var(--full-with-padding-inline);
+  }
 }
