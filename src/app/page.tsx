@@ -1,24 +1,26 @@
-type Post = {
-  id: number;
-  title: string;
-}
+import { ReactElement } from "react";
+import GlobalSearchBoxComponent from "@/components/global-search-box/globalSearchBoxComponent";
 
-export default async function Home() {
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts', {
-    cache: 'no-store',
-  });
+import Image from "next/image";
+import MainLogo from "@/assets/logo/MainLogo.png";
 
-  const posts: Post[] = await res.json();
+import styles from "./page.module.css";
 
+export default function Home(): ReactElement {
   return (
-    <main>
-      <h1 >سلام، رفیق. خوش اومدی به DocBook</h1>
-      <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
-      <ul>
-        {posts.map((post: Post) => (
-          <li key={post.id}>{post.title}</li>
-        ))}
-      </ul>
-    </main>
+    <div className={styles.home}>
+      <h1 className={styles.logo}>
+        <Image src={MainLogo} alt="main logo" width={50} />
+        DocBook
+      </h1>
+      <GlobalSearchBoxComponent />
+      <div className={styles.history}>
+        <div className={styles.title}>آخرین جستجو ها</div>
+        <ul>
+          <li>ارولوژیست</li>
+          <li>قلب و عروق</li>
+        </ul>
+      </div>
+    </div>
   );
 }

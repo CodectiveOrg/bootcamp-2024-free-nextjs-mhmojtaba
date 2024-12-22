@@ -1,0 +1,41 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 2rem;
+
+  min-block-size: 100%;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 2.5rem;
+    font-weight: 800;
+  }
+
+  .history {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    .title {
+    }
+
+    > ul {
+      display: flex;
+      gap: 1rem;
+
+      > li {
+        background-color: var(--color-gray-20);
+        padding: 0.3rem 0.8rem;
+        border-radius: 999rem;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
 import { Vazirmatn } from "next/font/google";
-import "./globals.css";
-import { NextFont } from "next/dist/compiled/@next/font";
 
-const vazirmatn: NextFont = Vazirmatn({
-  subsets: ['latin', 'arabic'],
-  display: 'swap',
-})
+import HeaderComponent from "@/components/header/header.component";
+
+import "./globals.css";
+import FooterComponent from "@/components/footer/footer.component";
+
+const vazirmatn = Vazirmatn({
+  subsets: ["latin", "arabic"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Doc Book | رزرو دکتر",
@@ -20,7 +23,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa" dir="rtl" className={vazirmatn.className}>
-      <body>{children}</body>
+      <body>
+        <HeaderComponent />
+        {children}
+        <p className={"tag"}>
+          نوبت دهی پزشکی، سامانه جستجو و نوبت دهی اینترنتی پزشکان
+        </p>
+        <FooterComponent />
+      </body>
     </html>
   );
 }
