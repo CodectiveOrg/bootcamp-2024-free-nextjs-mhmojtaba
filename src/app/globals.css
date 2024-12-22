@@ -86,7 +86,6 @@ body {
   min-block-size: 100dvh;
 
   > * {
-    /*max-width: var(--full-width);*/
     padding-inline: var(--full-with-padding-inline);
   }
 
