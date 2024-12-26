@@ -13,7 +13,7 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    font-size: 2.5rem;
+    font-size: var(--fs-700);
     font-weight: 800;
   }
 
@@ -34,7 +34,7 @@
         background-color: var(--color-gray-20);
         padding: 0.3rem 0.8rem;
         border-radius: 999rem;
-        font-size: 0.8rem;
+        font-size: var(--fs-300);
       }
     }
   }

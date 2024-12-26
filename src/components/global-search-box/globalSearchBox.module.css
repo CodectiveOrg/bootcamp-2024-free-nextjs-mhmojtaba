@@ -13,7 +13,7 @@
   .searchIcon {
     display: grid;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: var(--fs-500);
   }
 
   input {
