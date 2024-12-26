@@ -1,0 +1,68 @@
+.error {
+  display: grid;
+  grid-template-areas: "writing visual" "action action" "trace trace";
+  grid-template-columns: repeat(2, minmax(0, auto));
+  place-content: center;
+
+  min-block-size: 100%;
+
+  .writing {
+    grid-area: writing;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 1rem;
+
+    .status {
+      font-size: var(--fs-500);
+      font-weight: 900;
+      color: hsl(0, 100%, 50%);
+    }
+    > h1 {
+      font-size: var(--fs-600);
+      font-weight: 900;
+    }
+
+    > p {
+      font-size: var(--fs-300);
+    }
+  }
+  .visual {
+    grid-area: visual;
+  }
+  .action {
+    grid-area: action;
+    grid-column: 1/-1;
+    button {
+      background-color: transparent;
+      color: var(--color-primary);
+      padding: 0.5rem 1rem;
+      border: 1px solid currentColor;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      font-weight: 800;
+
+      &:hover {
+        background-color: var(--color-primary);
+        color: var(--color-primary-opposite);
+      }
+    }
+  }
+  .trace {
+    grid-area: trace;
+    min-inline-size: 100%;
+    inline-size: 0;
+    margin-block-start: 2rem;
+    margin-bottom: 1.5rem;
+
+    details {
+      cursor: pointer;
+    }
+
+    pre {
+      overflow: auto;
+      max-block-size: 10rem;
+    }
+  }
+}
