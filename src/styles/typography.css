@@ -1,0 +1,11 @@
+:root {
+  --fs-100: ;
+  --fs-200: ;
+  --fs-300: clamp(0.7rem, 0.6429rem + 0.4762vw, 1rem);
+  --fs-400: clamp(1rem, 1rem + 0vw, 1rem);
+  --fs-500: clamp(1.3rem, 1.1286rem + 0.7619vw, 1.7rem);
+  --fs-600: clamp(1.6rem, 1.4286rem + 0.7619vw, 2rem);
+  --fs-700: clamp(2rem, 1.7857rem + 0.9524vw, 2.5rem);
+  --fs-800: clamp(2.5rem, 1.6429rem + 3.8095vw, 4.5rem);
+  --fs-900: clamp(3rem, 1.5rem + 6.6667vw, 6.5rem);
+}

@@ -1,0 +1,28 @@
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+
+  .writing {
+    > h1 {
+      font-size: var(--fs-600);
+      font-weight: 900;
+    }
+
+    > p {
+      font-size: var(--fs-300);
+    }
+  }
+
+  .image {
+    > img {
+      block-size: 100%;
+    }
+  }
+
+  .search {
+  }
+}
