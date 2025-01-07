@@ -4,4 +4,4 @@ export const headerMenuItems = [
   { title: "تماس با ما", href: "/contact" },
 ];
 
-export const IMAGE_BASE_URL = "https://cdn.paziresh24.com/"
+export const IMAGE_BASE_URL = "https://cdn.paziresh24.com";
