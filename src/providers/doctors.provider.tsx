@@ -55,9 +55,17 @@ function DoctorProvider({ children }: Props) {
 
   function filterDoctors({ keys, value }: { keys: keyof DoctorModel; value: string; }) {
     dispatch({ type: "LOADING" });
+    if (value === "") {
+      const data = doctorData;
+      dispatch({ type: "GET_DOCTORS", payload: data });
+    } else if (value === "خوش برخورد" || value === "کمترین معطلی") {
+      const data = doctorData.filter((item) => item[keys].toString().includes(value));
+      dispatch({ type: "Filter_DOCTORS", payload: data });
+    } else if (value === "فعال شدن نوبت‌دهی") {
+      const data = doctorData.filter((item) => !item[keys].toString().includes(value));
+      dispatch({ type: "Filter_DOCTORS", payload: data });
+    }
 
-    const data = doctorData.filter((item) => item[keys].toString().includes(value));
-    dispatch({ type: "Filter_DOCTORS", payload: data });
   }
 
   return (

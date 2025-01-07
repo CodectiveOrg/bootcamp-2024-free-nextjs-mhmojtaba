@@ -1,0 +1,28 @@
+.filter-container {
+  background-color: var(--color-gray-30);
+  margin: 1rem 1rem;
+  padding: 0.6rem;
+  border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  -ms-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
+
+  .divider {
+    background-color: var(--color-gray-20);
+    margin: 0.2rem 0 1rem 0;
+    block-size: 2px;
+  }
+
+  .filter-options {
+    margin: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .option {
+      padding: 0 0.3rem 0.8rem 0.3rem;
+      border-bottom: 1px solid var(--color-gray-60);
+    }
+  }
+}

@@ -2,6 +2,19 @@ import { DoctorModel } from "@/types/types";
 
 export const doctorData: DoctorModel[] = [
   {
+    id: "ba7333ef-9e18-11ea-9877-005056b09c11",
+    name: "محمدرضا ادراکی",
+    image:
+      "/getImage/p24/search-men/01fffb3a5571c71c0d23baa1703af593.jpg?size=150",
+    isVerified: true,
+    averageRating: 4.95,
+    totalVotes: 423,
+    address: "شیراز,خیابان زند، روبرو هتل پارس، ساختمان صدر زاده، طبقه دوم",
+    firstAvailableAppointment: "15 دی 1 عصر",
+    brief: "فوق تخصص بیماری‌های قلب کودکان",
+    badges: ["خوش برخورد"],
+  },
+  {
     id: "97420f0d-b576-4f65-9ffc-a81b4b1b4e77",
     name: "پوراندخت جعفري",
     image:
@@ -84,19 +97,6 @@ export const doctorData: DoctorModel[] = [
     firstAvailableAppointment: "20 دی 9 صبح",
     brief: "متخصص اطفال",
     badges: ["فعال شدن نوبت‌دهی اینترنتی 18 دی 23:59", "کمترین معطلی"],
-  },
-  {
-    id: "ba7333ef-9e18-11ea-9877-005056b09c11",
-    name: "محمدرضا ادراکی",
-    image:
-      "/getImage/p24/search-men/01fffb3a5571c71c0d23baa1703af593.jpg?size=150",
-    isVerified: true,
-    averageRating: 4.95,
-    totalVotes: 423,
-    address: "شیراز,خیابان زند، روبرو هتل پارس، ساختمان صدر زاده، طبقه دوم",
-    firstAvailableAppointment: "15 دی 1 عصر",
-    brief: "فوق تخصص بیماری‌های قلب کودکان",
-    badges: ["خوش برخورد"],
   },
   {
     id: "a8a27637-9e67-11ea-9877-005056b09c11",
