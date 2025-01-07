@@ -1,0 +1,105 @@
+.card {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-gray-80);
+  background-color: var(--color-gray-40);
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  -ms-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
+
+  .topSection {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+
+    .userImage {
+      object-fit: cover;
+      border: 3px solid var(--color-primary);
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+    }
+
+    .cardInfo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+
+      .rating {
+        display: flex;
+        align-items: baseline;
+        font-size: 1rem;
+
+        .average {
+          margin: 0 0.2rem 0 0.5rem;
+          color: var(--color-primary);
+        }
+
+        .totalVotes {
+          color: var(--color-primary-contrast);
+        }
+      }
+    }
+  }
+
+  .address {
+    display: flex;
+    gap: 0.3rem;
+    margin: 1rem 0;
+  }
+
+  .badges {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    > p {
+      padding: 0.2rem 0.5rem;
+      border: 1px solid var(--color-gray-70);
+      border-radius: var(--border-radius);
+      -webkit-border-radius: var();
+      -moz-border-radius: var();
+      -ms-border-radius: var();
+      -o-border-radius: var();
+    }
+  }
+
+  .appointment {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    > span {
+      color: var(--color-gray-10);
+      font-weight: 900;
+      margin-right: 0.2rem;
+    }
+  }
+
+  .btn {
+    background-color: var(--color-primary);
+    width: 100%;
+    color: var(--color-primary-contrast);
+    padding: 0.5rem 1rem;
+    border: 1px solid currentColor;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 800;
+
+    &:hover {
+      background-color: var(--color-primary-dark);
+      color: var(--color-primary-opposite);
+    }
+
+    &:disabled {
+      background-color: var(--color-gray-30);
+      color: var(--color-gray-40);
+      cursor: not-allowed;
+    }
+  }
+}

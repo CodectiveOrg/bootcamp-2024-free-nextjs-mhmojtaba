@@ -1,0 +1,12 @@
+.loading {
+  background-color: var(--color-gray-16);
+  margin: 5rem auto;
+  text-align: center;
+}
+
+.doctor-container {
+  margin: 1rem 1rem;
+  gap: 1rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 10px var(--color-gray-10);
+}
