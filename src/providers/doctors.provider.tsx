@@ -1,8 +1,20 @@
 "use client";
-import { createContext, useContext, useEffect, useReducer, ReactNode, PropsWithChildren } from "react";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useReducer,
+  ReactNode,
+  PropsWithChildren,
+} from "react";
 
 import { doctorData } from "@/constants/doctors";
-import { actionType, DoctorModel, initialStateType, DataContextType } from "@/types/types";
+import {
+  actionType,
+  DoctorModel,
+  initialStateType,
+  DataContextType,
+} from "@/types/types";
 
 const DataContext = createContext<DataContextType>({} as DataContextType);
 
@@ -12,7 +24,10 @@ const initialState: initialStateType = {
   error: null,
 };
 
-const doctorReducer = (state: initialStateType = initialState, action: actionType): initialStateType => {
+const doctorReducer = (
+  state: initialStateType = initialState,
+  action: actionType,
+): initialStateType => {
   switch (action.type) {
     case "LOADING":
       return {
@@ -38,10 +53,10 @@ const doctorReducer = (state: initialStateType = initialState, action: actionTyp
 
 type Props = PropsWithChildren;
 
-
 function DoctorProvider({ children }: Props) {
-
-  const [{ isLoading, doctors, error }, dispatch] = useReducer<React.Reducer<initialStateType, actionType>>(doctorReducer, initialState);
+  const [{ isLoading, doctors, error }, dispatch] = useReducer<
+    React.Reducer<initialStateType, actionType>
+  >(doctorReducer, initialState);
 
   useEffect(() => {
     function getDoctors() {
@@ -53,19 +68,28 @@ function DoctorProvider({ children }: Props) {
     getDoctors();
   }, []);
 
-  function filterDoctors({ keys, value }: { keys: keyof DoctorModel; value: string; }) {
+  function filterDoctors({
+    keys,
+    value,
+  }: {
+    keys: keyof DoctorModel;
+    value: string;
+  }) {
     dispatch({ type: "LOADING" });
     if (value === "") {
       const data = doctorData;
       dispatch({ type: "GET_DOCTORS", payload: data });
     } else if (value === "خوش برخورد" || value === "کمترین معطلی") {
-      const data = doctorData.filter((item) => item[keys].toString().includes(value));
+      const data = doctorData.filter((item) =>
+        item[keys].toString().includes(value),
+      );
       dispatch({ type: "Filter_DOCTORS", payload: data });
     } else if (value === "فعال شدن نوبت‌دهی") {
-      const data = doctorData.filter((item) => !item[keys].toString().includes(value));
+      const data = doctorData.filter(
+        (item) => !item[keys].toString().includes(value),
+      );
       dispatch({ type: "Filter_DOCTORS", payload: data });
     }
-
   }
 
   return (

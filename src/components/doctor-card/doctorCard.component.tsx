@@ -14,49 +14,57 @@ interface DoctorCardProps {
   doctor: DoctorModel;
 }
 
-export default function DoctorCardComponent({ doctor }: DoctorCardProps): ReactElement {
-  const { id, name, image, brief, address, averageRating, totalVotes, badges, firstAvailableAppointment } = doctor;
+export default function DoctorCardComponent({
+  doctor,
+}: DoctorCardProps): ReactElement {
+  const {
+    id,
+    name,
+    image,
+    brief,
+    address,
+    averageRating,
+    totalVotes,
+    badges,
+    firstAvailableAppointment,
+  } = doctor;
 
   function checkAvailability(): boolean {
     const searchString = "فعال شدن نوبت‌دهی";
-    return badges.some(item => item.includes(searchString));
+    return badges.some((item) => item.includes(searchString));
   }
 
   return (
     <section className={styles.card}>
       <div className={styles.topSection}>
         <Link href={`/doctors/${id!}`}>
-          <Image className={styles.userImage}
+          <Image
+            className={styles.userImage}
             src={image ? `${IMAGE_BASE_URL}/${image}` : ""}
             alt={name}
-            width={100} height={100}
+            width={100}
+            height={100}
           />
         </Link>
         <div className={styles.cardInfo}>
-          <Link href={`/doctors/${id!}`} >
+          <Link href={`/doctors/${id!}`}>
             <h4>{name}</h4>
           </Link>
-          <Link href={`/doctors/${id!}`} >
+          <Link href={`/doctors/${id!}`}>
             <p>{brief}</p>
           </Link>
-          <Link href={`/doctors/${id!}`} >
+          <Link href={`/doctors/${id!}`}>
             <div className={styles.rating}>
-              <Image
-                src={star}
-                alt="star"
-                width={14} height={14}
-              />
+              <Image src={star} alt="star" width={14} height={14} />
               <p className={styles.average}>{averageRating}</p>
               <p className={styles.totalVotes}>{`(نظر ${totalVotes} )`}</p>
             </div>
           </Link>
-
         </div>
       </div>
       <div className={styles.address}>
         <MingcuteLocation2Line width={25} height={25} />
         {address}
-
       </div>
       <div className={styles.badges}>
         {badges.map((badge, index) => (
@@ -65,9 +73,10 @@ export default function DoctorCardComponent({ doctor }: DoctorCardProps): ReactE
       </div>
       <div className={styles.appointment}>
         اولین نوبت : <span>{firstAvailableAppointment}</span>
-
       </div>
-      <button className={styles.btn} disabled={checkAvailability()}>گرفتن نوبت</button>
+      <button className={styles.btn} disabled={checkAvailability()}>
+        گرفتن نوبت
+      </button>
     </section>
   );
 }

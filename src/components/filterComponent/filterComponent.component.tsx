@@ -13,13 +13,12 @@ export default function FilterComponent(): ReactElement {
         <div className={styles.divider}></div>
         <div className={styles["filter-options"]}>
           {filterItems.map((item, index) => (
-            < div className={styles.option} key={index}>
-              < CheckBoxComponent label={item.label} value={item.value} />
+            <div className={styles.option} key={index}>
+              <CheckBoxComponent label={item.label} value={item.value} />
             </div>
-          ))
-          }
+          ))}
         </div>
       </div>
-    </section >
+    </section>
   );
 }

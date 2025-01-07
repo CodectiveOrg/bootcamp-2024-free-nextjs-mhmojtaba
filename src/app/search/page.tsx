@@ -7,7 +7,6 @@ import GlobalSearchBoxComponent from "@/components/global-search-box/globalSearc
 import styles from "./page.module.css";
 
 export default function Page(): ReactElement {
-
   return (
     <div className={styles.search}>
       <GlobalSearchBoxComponent />

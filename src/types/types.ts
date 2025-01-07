@@ -12,21 +12,26 @@ export interface DoctorModel {
 }
 
 export interface initialStateType {
-    isLoading: boolean;
-    doctors: DoctorModel[];
-    error?: string | null;
+  isLoading: boolean;
+  doctors: DoctorModel[];
+  error?: string | null;
 }
 
 export type actionType = {
-    type: string;
-    payload?: DoctorModel[];
-}
+  type: string;
+  payload?: DoctorModel[];
+};
 
-
-export interface DataContextType { 
-    isLoading: boolean; 
-    doctors: DoctorModel[];
-    error?: any; 
-    filterDoctors: ({ keys, value }: { keys: keyof DoctorModel; value: string; }) => void; 
-    getDoctors?: () => void;
+export interface DataContextType {
+  isLoading: boolean;
+  doctors: DoctorModel[];
+  error?: any;
+  filterDoctors: ({
+    keys,
+    value,
+  }: {
+    keys: keyof DoctorModel;
+    value: string;
+  }) => void;
+  getDoctors?: () => void;
 }
