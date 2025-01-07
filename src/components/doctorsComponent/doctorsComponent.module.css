@@ -9,4 +9,25 @@
   gap: 1rem;
   border-radius: var(--border-radius);
   box-shadow: 0 0 10px var(--color-gray-10);
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+
+    .paginationBtn {
+      padding: 0.3rem 0.6rem;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      &.active {
+        background-color: var(--color-primary);
+      }
+    }
+  }
 }
