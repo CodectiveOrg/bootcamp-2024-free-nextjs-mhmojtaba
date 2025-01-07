@@ -8,6 +8,7 @@
   -moz-border-radius: var(--border-radius);
   -ms-border-radius: var(--border-radius);
   -o-border-radius: var(--border-radius);
+  box-shadow: 0 0 10px var(--color-gray-10);
 
   .topSection {
     display: flex;

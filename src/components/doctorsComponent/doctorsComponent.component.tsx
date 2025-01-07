@@ -1,17 +1,16 @@
 "use client";
 import { ReactElement } from "react";
+import clsx from "clsx";
 
 import { useDoctor } from "@/providers/doctors.provider";
-
-import DoctorCardComponent from "../doctor-card/doctorCard.component";
+import usePagination from "@/hooks/pagination";
+import DoctorCardComponent from "@/components/doctor-card/doctorCard.component";
 
 import styles from "./doctorsComponent.module.css";
-import usePagination from "@/hooks/pagination";
-import clsx from "clsx";
+
 export default function DoctorsComponent(): ReactElement {
   const { isLoading, doctors } = useDoctor();
   const { currentItems, currentPage, totalPages, setPage } = usePagination({ items: doctors, pageSize: 7 });
-  console.log(currentPage);
   if (isLoading) { return <div className={styles.loading}>loading...</div> }
 
   if (doctors.length === 0) { return <div className={styles.empty}>هیچ پزشکی یافت نشد</div> }
