@@ -16,7 +16,7 @@ export default function Home(): ReactElement {
       <GlobalSearchBoxComponent />
       <div className={styles.history}>
         <div className={styles.title}>آخرین جستجو ها</div>
-        <ul >
+        <ul>
           <li>ارولوژیست</li>
           <li>قلب و عروق</li>
         </ul>

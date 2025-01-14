@@ -60,7 +60,9 @@ export default function DoctorCardComponent({
               <Link href={`/doctors/${id!}`}>
                 <div className={styles.rating}>
                   <Image src={star} alt="star" width={14} height={14} />
-                  <p className={styles.average}>{averageRating.toPrecision(2)}</p>
+                  <p className={styles.average}>
+                    {averageRating.toPrecision(2)}
+                  </p>
                   <p className={styles.totalVotes}>{`(نظر ${totalVotes} )`}</p>
                 </div>
               </Link>

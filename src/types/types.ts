@@ -36,15 +36,15 @@ export interface DataContextType {
   getDoctors?: () => void;
 }
 
-export type filterType= {
+export type filterType = {
   query?: string;
   specialty?: string;
   location?: string;
   degree?: string;
   gender?: "male" | "female" | "both";
-}
+};
 
 export type selectOptionsType = {
   value?: string;
   label?: string;
-}
+};
