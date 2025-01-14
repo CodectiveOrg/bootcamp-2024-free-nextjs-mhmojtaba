@@ -11,10 +11,15 @@ import styles from "./filtersCard.module.css";
 export default function FiltersCardComponent(): ReactElement | null {
   const { filters, dispatch } = useFilters();
 
-
   const isEmpty = useMemo(() => {
     return (
-      !filters.query && !filters.expertise && !filters.gender && !filters.degree && !filters.option1 && !filters.option2 && !filters.option3
+      !filters.query &&
+      !filters.expertise &&
+      !filters.gender &&
+      !filters.degree &&
+      !filters.option1 &&
+      !filters.option2 &&
+      !filters.option3
     );
   }, [filters]);
 

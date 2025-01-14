@@ -8,7 +8,6 @@ import styles from "./expertise-filter.module.css";
 import { useFilters } from "@/providers/filters.provider";
 
 export default function ExpertiseFilterComponent(): ReactElement {
-
   const { dispatch } = useFilters();
 
   const buttonClickHandler = (value: string): void => {

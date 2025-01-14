@@ -14,7 +14,9 @@ type Props = {
   searchParams: Promise<SearchParams>;
 };
 
-export default async function Page({ searchParams }: Props): Promise<ReactElement> {
+export default async function Page({
+  searchParams,
+}: Props): Promise<ReactElement> {
   const defaultFilters = generateDefaultFilters(await searchParams);
   return (
     <FiltersProvider defaultFilters={defaultFilters}>

@@ -8,7 +8,6 @@ import { ThemeProvider } from "@/providers/theme.provider";
 import "@/styles/typography.css";
 import "./globals.css";
 
-
 const vazirmatn = Vazirmatn({
   subsets: ["latin", "arabic"],
   display: "swap",

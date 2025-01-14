@@ -12,14 +12,31 @@ type CheckBoxProps = {
 function CheckBoxComponent({ label, value }: CheckBoxProps) {
   const { filters, dispatch } = useFilters();
 
-  const onCheckHandler = (e: React.ChangeEvent<HTMLInputElement>, value: string) => {
+  const onCheckHandler = (
+    e: React.ChangeEvent<HTMLInputElement>,
+    value: string,
+  ) => {
     if (e.target.checked) {
-
       dispatch({
-        type: "updated_filter", key: value == "خوش برخورد" ? "option1" : value == "کمترین معطلی" ? "option2" : "option3", value
+        type: "updated_filter",
+        key:
+          value == "خوش برخورد"
+            ? "option1"
+            : value == "کمترین معطلی"
+              ? "option2"
+              : "option3",
+        value,
       });
     } else {
-      dispatch({ type: "removed_filter", key: value === "خوش برخورد" ? "option1" : value === "کمترین معطلی" ? "option2" : "option3" });
+      dispatch({
+        type: "removed_filter",
+        key:
+          value === "خوش برخورد"
+            ? "option1"
+            : value === "کمترین معطلی"
+              ? "option2"
+              : "option3",
+      });
     }
   };
 
@@ -33,7 +50,11 @@ function CheckBoxComponent({ label, value }: CheckBoxProps) {
           className={`${styles["tgl"]} ${styles["tgl-flat"]}`}
           id={value}
           value={value}
-          checked={filters.option1 == value || filters.option2 == value || filters.option3 == value}
+          checked={
+            filters.option1 == value ||
+            filters.option2 == value ||
+            filters.option3 == value
+          }
           type="checkbox"
           onChange={(e) => onCheckHandler(e, value)}
         />

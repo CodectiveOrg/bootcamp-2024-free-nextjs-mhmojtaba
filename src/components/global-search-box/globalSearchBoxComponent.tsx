@@ -49,7 +49,6 @@ export default function GlobalSearchBoxComponent(): ReactElement {
     router.replace(href);
   }, [filters, pathname, router]);
 
-
   return (
     <form className={styles.globalSearchBox} onSubmit={submitHandler}>
       <div className={styles.searchIcon}>

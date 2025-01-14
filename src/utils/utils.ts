@@ -1,9 +1,9 @@
 import { FiltersType, SearchParams } from "@/types/types";
 
-
-
-export function generateDefaultFilters(searchParams: SearchParams): FiltersType {
-  const { query, expertise, gender, degree , option } = searchParams;
+export function generateDefaultFilters(
+  searchParams: SearchParams,
+): FiltersType {
+  const { query, expertise, gender, degree, option } = searchParams;
 
   return {
     query: normalizeFilter(query),

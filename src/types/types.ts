@@ -57,7 +57,6 @@ export type FiltersType = {
   option1?: string;
   option2?: string;
   option3?: string;
-  
 };
 
 export type SearchParams = { [key: string]: string | string[] | undefined };
