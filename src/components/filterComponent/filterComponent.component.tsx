@@ -1,7 +1,10 @@
 import { ReactElement } from "react";
 
-import CheckBoxComponent from "@/components/checkBox/CheckBox.component";
-import { filterItems } from "@/constants/constants";
+import ExpertiseFilterComponent from "@/components/expertise-filter/expertise-filter.component";
+import CheckBoxFilterComponent from "@/components/checkBoxFilterComponent/CheckBoxFilter.component";
+import GenderFilterComponent from "@/components/gender-filter/gender-filter.component";
+import DegreeFilterComponent from "@/components/degree-filter/degree-filter.component";
+import FiltersCardComponent from "@/components/filters-card/filtersCard.component";
 
 import styles from "./filterComponent.module.css";
 
@@ -12,11 +15,11 @@ export default function FilterComponent(): ReactElement {
         <h2>فیلتر ها</h2>
         <div className={styles.divider}></div>
         <div className={styles["filter-options"]}>
-          {filterItems.map((item, index) => (
-            <div className={styles.option} key={index}>
-              <CheckBoxComponent label={item.label} value={item.value} />
-            </div>
-          ))}
+          <FiltersCardComponent />
+          <ExpertiseFilterComponent />
+          <DegreeFilterComponent />
+          <GenderFilterComponent />
+          <CheckBoxFilterComponent />
         </div>
       </div>
     </section>

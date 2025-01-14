@@ -48,3 +48,13 @@ export type selectOptionsType = {
   value?: string;
   label?: string;
 };
+
+export type FiltersType = {
+  query?: string;
+  expertise?: string;
+  gender?: string;
+  degree?: string;
+  option?: string;
+};
+
+export type SearchParams = { [key: string]: string | string[] | undefined };
