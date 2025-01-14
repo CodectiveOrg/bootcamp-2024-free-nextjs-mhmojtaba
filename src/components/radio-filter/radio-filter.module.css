@@ -1,0 +1,11 @@
+.container {
+  .title {
+    margin-bottom: 0.5rem;
+    font-weight: 900;
+  }
+
+  label {
+    display: flex;
+    gap: 0.5rem;
+  }
+}
