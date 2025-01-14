@@ -1,21 +1,25 @@
 "use client";
 import React from "react";
+import { useFilters } from "@/providers/filters.provider";
+
+import styles from "./checkbox.module.css";
 
 type CheckBoxProps = {
   label: string;
   value: string;
 };
 
-import styles from "./checkbox.module.css";
-import { useDoctor } from "@/providers/doctors.provider";
 function CheckBoxComponent({ label, value }: CheckBoxProps) {
-  const { filterDoctors } = useDoctor();
+  const { filters, dispatch } = useFilters();
 
-  const onCheckHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const onCheckHandler = (e: React.ChangeEvent<HTMLInputElement>, value: string) => {
     if (e.target.checked) {
-      filterDoctors({ keys: "badges", value: e.target.value });
+
+      dispatch({
+        type: "updated_filter", key: value == "خوش برخورد" ? "option1" : value == "کمترین معطلی" ? "option2" : "option3", value
+      });
     } else {
-      filterDoctors({ keys: "badges", value: "" });
+      dispatch({ type: "removed_filter", key: value === "خوش برخورد" ? "option1" : value === "کمترین معطلی" ? "option2" : "option3" });
     }
   };
 
@@ -29,8 +33,9 @@ function CheckBoxComponent({ label, value }: CheckBoxProps) {
           className={`${styles["tgl"]} ${styles["tgl-flat"]}`}
           id={value}
           value={value}
+          checked={filters.option1 == value || filters.option2 == value || filters.option3 == value}
           type="checkbox"
-          onChange={(e) => onCheckHandler(e)}
+          onChange={(e) => onCheckHandler(e, value)}
         />
         <label className={styles["tgl-btn"]} htmlFor={value}></label>
       </div>

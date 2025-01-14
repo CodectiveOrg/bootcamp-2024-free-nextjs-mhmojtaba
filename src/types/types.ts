@@ -54,7 +54,10 @@ export type FiltersType = {
   expertise?: string;
   gender?: string;
   degree?: string;
-  option?: string;
+  option1?: string;
+  option2?: string;
+  option3?: string;
+  
 };
 
 export type SearchParams = { [key: string]: string | string[] | undefined };

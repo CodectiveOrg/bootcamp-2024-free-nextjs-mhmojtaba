@@ -11,9 +11,10 @@ import styles from "./filtersCard.module.css";
 export default function FiltersCardComponent(): ReactElement | null {
   const { filters, dispatch } = useFilters();
 
+
   const isEmpty = useMemo(() => {
     return (
-      !filters.query && !filters.expertise && !filters.gender && !filters.degree
+      !filters.query && !filters.expertise && !filters.gender && !filters.degree && !filters.option1 && !filters.option2 && !filters.option3
     );
   }, [filters]);
 
@@ -57,9 +58,19 @@ export default function FiltersCardComponent(): ReactElement | null {
               {filters.degree}
             </li>
           )}
-          {filters.option && (
-            <li onClick={() => filterClickHandler("option")}>
-              {filters.option}
+          {filters.option1 && (
+            <li onClick={() => filterClickHandler("option1")}>
+              {filters.option1}
+            </li>
+          )}
+          {filters.option2 && (
+            <li onClick={() => filterClickHandler("option2")}>
+              {filters.option2}
+            </li>
+          )}
+          {filters.option3 && (
+            <li onClick={() => filterClickHandler("option3")}>
+              {filters.option3}
             </li>
           )}
         </ul>
