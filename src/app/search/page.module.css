@@ -23,7 +23,7 @@
 
     .results {
       margin-bottom: 1rem;
-      background-color: var(--color-gray-16);
+      background-color: var(--color-gray-60);
       border-radius: var(--border-radius);
       -webkit-border-radius: var(--border-radius);
       -moz-border-radius: var(--border-radius);

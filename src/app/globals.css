@@ -43,6 +43,11 @@
   margin: 0;
 }
 
+[data-theme="light"] {
+  --color-default-background: var(--color-gray-98);
+  --color-default-forground: var(--color-gray-16);
+}
+
 html {
   color-scheme: dark;
 }
@@ -77,6 +82,9 @@ a {
 /**/
 body {
   background-color: var(--color-default-background);
+  transition:
+    background-color 0.3s,
+    color 0.3s;
   color: var(--color-default-forground);
   font-size: var(--fs-400);
   display: grid;
@@ -91,7 +99,7 @@ body {
 
   .tag {
     background-color: var(--color-gray-20);
-
+    color: var(--color-gray-90);
     padding-block: 0.7rem;
     text-align: center;
   }

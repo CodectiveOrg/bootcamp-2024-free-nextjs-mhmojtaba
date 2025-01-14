@@ -1,7 +1,7 @@
 .card {
   border-radius: var(--border-radius);
   border: 1px solid var(--color-gray-80);
-  background-color: var(--color-gray-40);
+  background-color: light-dark(var(--color-gray-98), var(--color-gray-40));
   padding: 1rem 0.5rem;
   margin-bottom: 1rem;
   -webkit-border-radius: var(--border-radius);
@@ -14,7 +14,14 @@
     display: flex;
     gap: 1rem;
     align-items: center;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
+
+    .cardInfo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+    }
 
     .userImage {
       object-fit: cover;
@@ -26,17 +33,19 @@
       -o-border-radius: 50%;
     }
 
-    .cardInfo {
+    .userInfo {
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
       justify-content: space-between;
       gap: 1rem;
+      width: 100%;
+      padding: 0 0.3rem 0 1rem;
 
       .rating {
         display: flex;
         align-items: baseline;
         font-size: 1rem;
+        justify-content: flex-end;
 
         .average {
           margin: 0 0.2rem 0 0.5rem;
@@ -44,7 +53,10 @@
         }
 
         .totalVotes {
-          color: var(--color-primary-contrast);
+          color: light-dark(
+            var(--color-gray-10),
+            var(--color-primary-contrast)
+          );
         }
       }
     }

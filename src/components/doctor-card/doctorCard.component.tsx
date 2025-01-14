@@ -37,40 +37,47 @@ export default function DoctorCardComponent({
   return (
     <section className={styles.card}>
       <div className={styles.topSection}>
-        <Link href={`/doctors/${id!}`}>
-          <Image
-            className={styles.userImage}
-            src={image ? `${IMAGE_BASE_URL}/${image}` : ""}
-            alt={name}
-            width={100}
-            height={100}
-          />
-        </Link>
         <div className={styles.cardInfo}>
           <Link href={`/doctors/${id!}`}>
-            <h4>{name}</h4>
+            <Image
+              className={styles.userImage}
+              src={image ? `${IMAGE_BASE_URL}/${image}` : ""}
+              alt={name}
+              width={100}
+              height={100}
+            />
           </Link>
-          <Link href={`/doctors/${id!}`}>
-            <p>{brief}</p>
-          </Link>
-          <Link href={`/doctors/${id!}`}>
-            <div className={styles.rating}>
-              <Image src={star} alt="star" width={14} height={14} />
-              <p className={styles.average}>{averageRating}</p>
-              <p className={styles.totalVotes}>{`(نظر ${totalVotes} )`}</p>
+          <div className={styles.userInfo}>
+            <div>
+              <Link href={`/doctors/${id!}`}>
+                <h4>{name}</h4>
+              </Link>
+              <Link href={`/doctors/${id!}`}>
+                <p>{brief}</p>
+              </Link>
             </div>
-          </Link>
+            <div>
+              <Link href={`/doctors/${id!}`}>
+                <div className={styles.rating}>
+                  <Image src={star} alt="star" width={14} height={14} />
+                  <p className={styles.average}>{averageRating.toPrecision(2)}</p>
+                  <p className={styles.totalVotes}>{`(نظر ${totalVotes} )`}</p>
+                </div>
+              </Link>
+              <div className={styles.badges}>
+                {badges.map((badge, index) => (
+                  <p key={index}>{badge}</p>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div className={styles.address}>
         <MingcuteLocation2Line width={25} height={25} />
         {address}
       </div>
-      <div className={styles.badges}>
-        {badges.map((badge, index) => (
-          <p key={index}>{badge}</p>
-        ))}
-      </div>
+
       <div className={styles.appointment}>
         اولین نوبت : <span>{firstAvailableAppointment}</span>
       </div>
