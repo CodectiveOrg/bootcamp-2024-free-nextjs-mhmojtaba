@@ -33,4 +33,10 @@
       color: var(--color-primary-opposite);
     }
   }
+
+  .rightSection {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
 }

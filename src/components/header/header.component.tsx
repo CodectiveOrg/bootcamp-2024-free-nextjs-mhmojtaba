@@ -7,6 +7,7 @@ import clsx from "clsx";
 
 import { headerMenuItems } from "@/constants/constants";
 import styles from "./header.module.css";
+import TogglethemeComponent from "../toggleTheme/Toggletheme.component";
 
 export default function HeaderComponent(): ReactElement {
   const pathname = usePathname();
@@ -26,7 +27,10 @@ export default function HeaderComponent(): ReactElement {
           ))}
         </ul>
       </nav>
-      <button className={styles.btnLogin}>ورود | ثبت نام</button>
+      <div className={styles.rightSection}>
+        <TogglethemeComponent />
+        <button className={styles.btnLogin}>ورود | ثبت نام</button>
+      </div>
     </header>
   );
 }

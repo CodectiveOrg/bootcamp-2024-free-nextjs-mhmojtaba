@@ -24,6 +24,8 @@
   --color-default-background: var(--color-gray-10);
   --color-default-forground: var(--color-gray-98);
 
+  --color-danger: hsl(10deg 80% 48%);
+
   --border-radius: 0.9rem;
 
   --full-width: 75rem;
@@ -32,6 +34,14 @@
   --animation-duration-fast: 0.2s;
   --animation-duration-normal: 0.6s;
   --animation-duration-slow: 1s;
+  --shadow-300: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-400: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-500: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-700: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-800: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-900: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 }
 
 /*css reset*/
@@ -41,6 +51,11 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+[data-theme="light"] {
+  --color-default-background: var(--color-gray-98);
+  --color-default-forground: var(--color-gray-16);
 }
 
 html {
@@ -77,6 +92,9 @@ a {
 /**/
 body {
   background-color: var(--color-default-background);
+  transition:
+    background-color 0.3s,
+    color 0.3s;
   color: var(--color-default-forground);
   font-size: var(--fs-400);
   display: grid;
@@ -91,7 +109,7 @@ body {
 
   .tag {
     background-color: var(--color-gray-20);
-
+    color: var(--color-gray-90);
     padding-block: 0.7rem;
     text-align: center;
   }

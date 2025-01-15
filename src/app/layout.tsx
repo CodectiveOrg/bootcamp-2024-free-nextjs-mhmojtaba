@@ -3,9 +3,10 @@ import { Vazirmatn } from "next/font/google";
 
 import HeaderComponent from "@/components/header/header.component";
 
+import FooterComponent from "@/components/footer/footer.component";
+import { ThemeProvider } from "@/providers/theme.provider";
 import "@/styles/typography.css";
 import "./globals.css";
-import FooterComponent from "@/components/footer/footer.component";
 
 const vazirmatn = Vazirmatn({
   subsets: ["latin", "arabic"],
@@ -25,12 +26,14 @@ export default function RootLayout({
   return (
     <html lang="fa" dir="rtl" className={vazirmatn.className}>
       <body>
-        <HeaderComponent />
-        {children}
-        <p className={"tag"}>
-          نوبت دهی پزشکی، سامانه جستجو و نوبت دهی اینترنتی پزشکان
-        </p>
-        <FooterComponent />
+        <ThemeProvider>
+          <HeaderComponent />
+          {children}
+          <p className={"tag"}>
+            نوبت دهی پزشکی، سامانه جستجو و نوبت دهی اینترنتی پزشکان
+          </p>
+          <FooterComponent />
+        </ThemeProvider>
       </body>
     </html>
   );
