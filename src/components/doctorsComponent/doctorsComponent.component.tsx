@@ -8,12 +8,19 @@ import DoctorCardComponent from "@/components/doctor-card/doctorCard.component";
 
 import styles from "./doctorsComponent.module.css";
 
+
 export default function DoctorsComponent(): ReactElement {
-  const { filteredDoctors } = useDoctors();
+
+  const { filteredDoctors, loading } = useDoctors();
+
   const { currentItems, currentPage, totalPages, setPage } = usePagination({
     items: filteredDoctors,
     pageSize: 7,
   });
+
+  if (loading) {
+    return <div className={styles.empty}>در حال بارگذاری...</div>;
+  }
 
   if (filteredDoctors.length === 0) {
     return <div className={styles.empty}>هیچ پزشکی یافت نشد</div>;
@@ -21,7 +28,7 @@ export default function DoctorsComponent(): ReactElement {
 
   return (
     <section className={styles["doctor-container"]}>
-      {currentItems.map((doctor) => (
+      {currentItems.length > 0 && currentItems.map((doctor) => (
         <DoctorCardComponent key={doctor.id} doctor={doctor} />
       ))}
       <div className={styles.pagination}>

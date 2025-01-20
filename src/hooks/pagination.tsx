@@ -8,35 +8,19 @@ interface PaginationProps {
   pageSize: number;
 }
 
-function usePagination({ items, pageSize }: PaginationProps) {
-  const [currentPage, setCurrentPage] = useState<number>(1);
-  const totalPages = Math.ceil(items.length / pageSize);
-  const indexOfLastItem = currentPage * pageSize;
-  const indexOfFirstItem = indexOfLastItem - pageSize;
-
-  const currentItems: DoctorModel[] = items.slice(
-    indexOfFirstItem,
-    indexOfLastItem,
-  );
-  const setPage = (newPage: number) => {
-    if (newPage >= 1 && newPage <= totalPages) {
-      setCurrentPage(newPage);
-    }
-  };
+const usePagination = ({ items, pageSize }: PaginationProps) => {
+  const [currentPage, setPage] = useState<number>(1);
+  const [currentItems, setCurrentItems] = useState<DoctorModel[]>([]);
 
   useEffect(() => {
-    // Ensure currentPage doesn't exceed totalPages
-    if (currentPage > totalPages) {
-      setCurrentPage(totalPages);
-    }
-  }, [currentPage, totalPages]);
+    const startIndex = (currentPage - 1) * pageSize;
+    const endIndex = startIndex + pageSize;
+    setCurrentItems(items.slice(startIndex, endIndex));
+  }, [items, currentPage, pageSize]);
 
-  return {
-    currentItems,
-    currentPage,
-    totalPages,
-    setPage,
-  };
-}
+  const totalPages = Math.ceil(items.length / pageSize);
+
+  return { currentItems, currentPage, totalPages, setPage };
+};
 
 export default usePagination;

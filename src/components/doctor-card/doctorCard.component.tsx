@@ -83,9 +83,11 @@ export default function DoctorCardComponent({
       <div className={styles.appointment}>
         اولین نوبت : <span>{firstAvailableAppointment}</span>
       </div>
-      <button className={styles.btn} disabled={checkAvailability()}>
-        گرفتن نوبت
-      </button>
+      <Link href={`/doctors/${id!}`}>
+        <button className={styles.btn} disabled={checkAvailability()}>
+          گرفتن نوبت
+        </button>
+      </Link>
     </section>
   );
 }
