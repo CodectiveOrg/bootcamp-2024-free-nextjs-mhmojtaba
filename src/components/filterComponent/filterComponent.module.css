@@ -4,10 +4,6 @@
   margin: 1rem 1rem;
   padding: 0.6rem;
   border-radius: var(--border-radius);
-  -webkit-border-radius: var(--border-radius);
-  -moz-border-radius: var(--border-radius);
-  -ms-border-radius: var(--border-radius);
-  -o-border-radius: var(--border-radius);
 
   .divider {
     background-color: var(--color-gray-20);
