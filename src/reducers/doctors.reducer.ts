@@ -3,7 +3,7 @@ import { filterDoctors } from "@/utils/utils";
 
 export type Action =
   | { type: "SET_DOCTORS"; payload: DoctorModel[] }
-  | { type: "SET_FILTERS"; payload: FiltersType } 
+  | { type: "SET_FILTERS"; payload: FiltersType }
   | { type: "SET_LOADING"; payload: boolean };
 
 type State = {

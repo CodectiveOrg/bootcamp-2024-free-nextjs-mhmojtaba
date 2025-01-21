@@ -8,9 +8,7 @@ import DoctorCardComponent from "@/components/doctor-card/doctorCard.component";
 
 import styles from "./doctorsComponent.module.css";
 
-
 export default function DoctorsComponent(): ReactElement {
-
   const { filteredDoctors, loading } = useDoctors();
 
   const { currentItems, currentPage, totalPages, setPage } = usePagination({
@@ -28,9 +26,10 @@ export default function DoctorsComponent(): ReactElement {
 
   return (
     <section className={styles["doctor-container"]}>
-      {currentItems.length > 0 && currentItems.map((doctor) => (
-        <DoctorCardComponent key={doctor.id} doctor={doctor} />
-      ))}
+      {currentItems.length > 0 &&
+        currentItems.map((doctor) => (
+          <DoctorCardComponent key={doctor.id} doctor={doctor} />
+        ))}
       <div className={styles.pagination}>
         {[...Array(totalPages)].map((_, i) => (
           <button

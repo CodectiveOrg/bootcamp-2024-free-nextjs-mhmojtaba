@@ -54,7 +54,9 @@ export default function DoctorsProvider({
   }, [filters]);
 
   return (
-    <DoctorsContext.Provider value={{ filteredDoctors: state.filteredDoctors, loading: state.loading }}>
+    <DoctorsContext.Provider
+      value={{ filteredDoctors: state.filteredDoctors, loading: state.loading }}
+    >
       {children}
     </DoctorsContext.Provider>
   );
