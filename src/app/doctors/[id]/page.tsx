@@ -1,9 +1,10 @@
 import { ReactElement } from "react";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { doctorData } from "@/constants/doctors";
+import { doctorData } from "@/mock/doctors";
 import star from "@/assets/Images/starImage.svg";
 import { IMAGE_BASE_URL } from "@/constants/constants";
+import OpinionComponents from "./opinion/Opinion.components";
 import styles from "./page.module.css";
 
 type Props = {
@@ -95,7 +96,7 @@ export default function Page({ params }: Props): ReactElement {
                   className={styles.image}
                 />
                 <div>
-                  <div>{selectedDoctor.name}</div>
+                  <div className={styles.name}>{selectedDoctor.name}</div>
                   <div className={styles.nezam}>
                     شماره نظام پزشکی {selectedDoctor.totalVotes}
                   </div>
@@ -177,6 +178,10 @@ export default function Page({ params }: Props): ReactElement {
                 </div>
               </div>
             </section>
+            <section className={styles.reviews}>
+              <h3>نظرات درباره {selectedDoctor.name}</h3>
+              <OpinionComponents selectedDoctor={selectedDoctor} />
+            </section>
           </div>
           <div className={styles.appointment}>
             <div className={styles.appointmentContent}>
@@ -195,7 +200,9 @@ export default function Page({ params }: Props): ReactElement {
                         <circle cx="8" cy="8" r="8" fill="#BDF0E0"></circle>
                         <circle cx="8" cy="8" r="4" fill="#0BB07B"></circle>
                       </svg>
-                      <div>نوبت دهی آنلاین</div>
+                      <div className={styles.onlineBookTitle_text}>
+                        نوبت دهی آنلاین
+                      </div>
                     </div>
                   </div>
                   <div className={styles.onlineBook_detail}>
