@@ -5,7 +5,7 @@ import DoctorsComponent from "@/components/doctorsComponent/doctorsComponent.com
 import GlobalSearchBoxComponent from "@/components/global-search-box/globalSearchBoxComponent";
 import FiltersProvider from "@/providers/filters.provider";
 import DoctorsProvider from "@/providers/doctorsProvider";
-import { doctorData } from "@/constants/doctors";
+import { doctorData } from "@/mock/doctors";
 import { SearchParams } from "@/types/types";
 import { generateDefaultFilters } from "@/utils/utils";
 
