@@ -4,6 +4,7 @@
   justify-content: space-between;
   gap: 2rem;
   padding-block: 1rem;
+  border-bottom: 1px solid var(--color-gray-80);
 
   nav {
     > ul {
