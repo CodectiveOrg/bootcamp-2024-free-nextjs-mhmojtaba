@@ -14,6 +14,17 @@ export interface DoctorModel {
   badges: string[];
 }
 
+export interface OpinionModel {
+  id: string;
+  author: string;
+  image: string | null;
+  isVisited: boolean;
+  rate: number;
+  onlineVisit: boolean;
+  message: string;
+  lastVisit: string;
+}
+
 export interface initialStateType {
   isLoading: boolean;
   doctors: DoctorModel[];
