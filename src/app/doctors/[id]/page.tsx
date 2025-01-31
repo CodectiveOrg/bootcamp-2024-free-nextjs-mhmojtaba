@@ -16,7 +16,6 @@ export default function Page({ params }: Props): ReactElement {
 
   const selectedDoctor = doctorData.find((dr) => dr.id === id);
 
-  console.log(selectedDoctor);
   if (!selectedDoctor) return notFound();
 
   return (
