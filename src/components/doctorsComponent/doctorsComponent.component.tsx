@@ -26,10 +26,9 @@ export default function DoctorsComponent(): ReactElement {
 
   return (
     <section className={styles["doctor-container"]}>
-      {currentItems.length > 0 &&
-        currentItems.map((doctor) => (
-          <DoctorCardComponent key={doctor.id} doctor={doctor} />
-        ))}
+      {currentItems.map((doctor) => (
+        <DoctorCardComponent key={doctor.id} doctor={doctor} />
+      ))}
       <div className={styles.pagination}>
         {[...Array(totalPages)].map((_, i) => (
           <button
