@@ -33,7 +33,7 @@
 
       > li {
         background-color: var(--color-gray-20);
-        padding: 0.3rem 0.8rem;
+        padding: 0.3125rem 0.75rem;
         border-radius: 999rem;
         font-size: var(--fs-300);
       }
