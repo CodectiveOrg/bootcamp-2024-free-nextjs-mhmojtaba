@@ -89,7 +89,8 @@ const DoctorInfoComponent = ({
             <div className={styles.activityInfo}>
               <MedalIcon />
               <div>
-                دکتر بوک بیش از {years > 0 && `${years}  سال و`}{" "}
+                دکتر بوک بیش از {years > 0 && `${years} سال`}{" "}
+                {years > 0 && months > 0 && " و "}
                 {months > 0 && `${months} ماه`} افتخار میزبانی از صفحه اختصاصی{" "}
                 <span className={styles.activityInfoName}>
                   {selectedDoctor.name}
