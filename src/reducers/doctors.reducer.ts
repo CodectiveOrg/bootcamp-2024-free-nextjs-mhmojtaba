@@ -28,7 +28,6 @@ export function doctorsReducer(state: State, action: Action): State {
         ...state,
         filters: action.payload,
         filteredDoctors: filterDoctors(state.allDoctors, action.payload),
-        loading: false,
       };
     case "SET_LOADING":
       return {
