@@ -1,0 +1,85 @@
+.commentContent {
+  margin-block-start: 0.5rem;
+
+  border-block-end: 3px solid var(--color-gray-70);
+
+  .commentUser {
+    max-width: 100%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .commentUserInfo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+
+      .commentUserLogo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        width: 2.5rem;
+        height: 2.5rem;
+        padding: 0.5rem;
+
+        border-radius: 100%;
+
+        background-color: var(--color-primary);
+      }
+
+      .commentUserNameBadge {
+        .commentUserName {
+          span {
+            font-size: 0.75rem;
+
+            background-color: var(--color-gray-70);
+
+            padding: 0.125rem 0.25rem;
+
+            border-radius: var(--border-radius);
+          }
+        }
+
+        .commentUserVisitInfo {
+          span {
+            font-size: 0.75rem;
+          }
+        }
+      }
+    }
+    .commentUserRate {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 2.5rem;
+      height: 2.5rem;
+
+      border-radius: var(--border-radius);
+      background-color: var(--color-primary);
+    }
+  }
+
+  .message {
+    margin-block-start: 0.75rem;
+  }
+
+  .commentRate {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+
+    margin-block: 1.5rem;
+
+    .shareComment {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+}

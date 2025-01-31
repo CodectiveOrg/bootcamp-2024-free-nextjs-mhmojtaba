@@ -1,0 +1,20 @@
+.container {
+  margin-block-start: 1rem;
+
+  .title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-block: 1rem;
+  }
+
+  .content {
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-gray-80);
+
+    background-color: light-dark(var(--color-gray-98), var(--color-gray-40));
+    box-shadow: var(--shadow-light-dark);
+
+    padding: 1rem 0.5rem;
+    margin-block-end: 1rem;
+  }
+}

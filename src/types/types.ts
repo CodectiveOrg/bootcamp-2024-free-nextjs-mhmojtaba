@@ -12,6 +12,19 @@ export interface DoctorModel {
   degree: string;
   expertise: string;
   badges: string[];
+  registerDate: string;
+}
+
+export interface CommentModel {
+  id: string;
+  author: string;
+  image: string | null;
+  isVisited: boolean;
+  rate: number;
+  onlineVisit: boolean;
+  message: string;
+  lastVisit: string;
+  createdAt: string;
 }
 
 export interface initialStateType {

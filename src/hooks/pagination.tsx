@@ -1,42 +1,25 @@
 "use client";
 
 import { DoctorModel } from "@/types/types";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 
 interface PaginationProps {
   items: DoctorModel[];
   pageSize: number;
 }
 
-function usePagination({ items, pageSize }: PaginationProps) {
-  const [currentPage, setCurrentPage] = useState<number>(1);
+const usePagination = ({ items, pageSize }: PaginationProps) => {
+  const [currentPage, setPage] = useState<number>(1);
+
+  const currentItems = useMemo(() => {
+    const startIndex = (currentPage - 1) * pageSize;
+    const endIndex = startIndex + pageSize;
+    return items.slice(startIndex, endIndex);
+  }, [items, currentPage, pageSize]);
+
   const totalPages = Math.ceil(items.length / pageSize);
-  const indexOfLastItem = currentPage * pageSize;
-  const indexOfFirstItem = indexOfLastItem - pageSize;
 
-  const currentItems: DoctorModel[] = items.slice(
-    indexOfFirstItem,
-    indexOfLastItem,
-  );
-  const setPage = (newPage: number) => {
-    if (newPage >= 1 && newPage <= totalPages) {
-      setCurrentPage(newPage);
-    }
-  };
-
-  useEffect(() => {
-    // Ensure currentPage doesn't exceed totalPages
-    if (currentPage > totalPages) {
-      setCurrentPage(totalPages);
-    }
-  }, [currentPage, totalPages]);
-
-  return {
-    currentItems,
-    currentPage,
-    totalPages,
-    setPage,
-  };
-}
+  return { currentItems, currentPage, totalPages, setPage };
+};
 
 export default usePagination;
