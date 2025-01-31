@@ -7,7 +7,6 @@ import DoctorInfoComponent from "@/components/doctorInfo/DoctorInfo.component";
 
 import styles from "./page.module.css";
 
-
 type Props = {
   params: { id: string };
 };

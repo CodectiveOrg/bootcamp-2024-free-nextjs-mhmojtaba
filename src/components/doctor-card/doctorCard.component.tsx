@@ -5,7 +5,6 @@ import Image from "next/image";
 import { DoctorModel } from "@/types/types";
 import { IMAGE_BASE_URL } from "@/constants/constants";
 
-
 import { MingcuteLocation2Line } from "@/icons/icons";
 
 import RateBoxComponent from "../rateBoxComponent/RateBox.Component";
@@ -20,15 +19,8 @@ interface DoctorCardProps {
 export default function DoctorCardComponent({
   doctor,
 }: DoctorCardProps): ReactElement {
-  const {
-    id,
-    name,
-    image,
-    brief,
-    address,
-    badges,
-    firstAvailableAppointment,
-  } = doctor;
+  const { id, name, image, brief, address, badges, firstAvailableAppointment } =
+    doctor;
 
   function checkAvailability(): boolean {
     const searchString = "فعال شدن نوبت‌دهی";
@@ -54,7 +46,11 @@ export default function DoctorCardComponent({
                 <div className={styles.username}>{name}</div>
               </Link>
               <Link href={`/doctors/${id!}`}>
-                <p>{brief.length > 50 ? `${brief.slice(0, 50)} ..........` : brief}</p>
+                <p>
+                  {brief.length > 50
+                    ? `${brief.slice(0, 50)} ..........`
+                    : brief}
+                </p>
               </Link>
             </div>
             <div>
