@@ -7,12 +7,12 @@
 
   .divider {
     background-color: var(--color-gray-20);
-    margin: 0.2rem 0 1rem 0;
+    margin-block: 0.2rem 1rem;
     block-size: 2px;
   }
 
   .filter-options {
-    margin: 0.5rem 0;
+    margin-block: 0.5rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;

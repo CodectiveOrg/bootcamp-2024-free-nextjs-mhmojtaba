@@ -12,7 +12,7 @@
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin: 1rem 0;
+    margin-block: 1rem;
 
     .paginationBtn {
       padding: 0.1rem 0.6rem;

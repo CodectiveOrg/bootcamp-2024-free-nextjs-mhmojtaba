@@ -7,8 +7,10 @@
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   column-gap: 1.5rem;
+}
 
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+@media (min-width: 768px) {
+  .content {
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
   }
 }

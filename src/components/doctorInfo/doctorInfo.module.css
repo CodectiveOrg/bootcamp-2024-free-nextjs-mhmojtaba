@@ -1,6 +1,4 @@
 .doctorInfo {
-  grid-column: span 1;
-
   ul.sharing {
     display: flex;
     align-items: center;
