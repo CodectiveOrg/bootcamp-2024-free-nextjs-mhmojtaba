@@ -17,11 +17,11 @@ export default function DoctorsComponent(): ReactElement {
   });
 
   if (loading) {
-    return <div className={styles.empty}>در حال بارگذاری...</div>;
+    return <div className={styles.loading}>در حال بارگذاری...</div>;
   }
 
   if (filteredDoctors.length === 0) {
-    return <div className={styles.empty}>هیچ پزشکی یافت نشد</div>;
+    return <div className={styles.notFound}>هیچ پزشکی یافت نشد</div>;
   }
 
   return (
