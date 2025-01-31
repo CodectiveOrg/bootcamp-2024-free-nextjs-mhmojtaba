@@ -5,9 +5,12 @@ import Image from "next/image";
 import { DoctorModel } from "@/types/types";
 import { IMAGE_BASE_URL } from "@/constants/constants";
 
-import star from "@/assets/Images/starImage.svg";
-import MingcuteLocation2Line from "@/icons/MingcuteLocation2Line";
 
+import { MingcuteLocation2Line } from "@/icons/icons";
+
+import RateBoxComponent from "../rateBoxComponent/RateBox.Component";
+
+import clsx from "clsx";
 import styles from "./doctorCard.module.css";
 
 interface DoctorCardProps {
@@ -23,8 +26,6 @@ export default function DoctorCardComponent({
     image,
     brief,
     address,
-    averageRating,
-    totalVotes,
     badges,
     firstAvailableAppointment,
   } = doctor;
@@ -50,21 +51,15 @@ export default function DoctorCardComponent({
           <div className={styles.userInfo}>
             <div>
               <Link href={`/doctors/${id!}`}>
-                <h4>{name}</h4>
+                <div className={styles.username}>{name}</div>
               </Link>
               <Link href={`/doctors/${id!}`}>
-                <p>{brief}</p>
+                <p>{brief.length > 50 ? `${brief.slice(0, 50)} ..........` : brief}</p>
               </Link>
             </div>
             <div>
               <Link href={`/doctors/${id!}`}>
-                <div className={styles.rating}>
-                  <Image src={star} alt="star" width={14} height={14} />
-                  <p className={styles.average}>
-                    {averageRating.toPrecision(2)}
-                  </p>
-                  <p className={styles.totalVotes}>{`(نظر ${totalVotes} )`}</p>
-                </div>
+                <RateBoxComponent selectedDoctor={doctor} flexEnd={true} />
               </Link>
               <div className={styles.badges}>
                 {badges.map((badge, index) => (
@@ -83,10 +78,14 @@ export default function DoctorCardComponent({
       <div className={styles.appointment}>
         اولین نوبت : <span>{firstAvailableAppointment}</span>
       </div>
-      <Link href={`/doctors/${id!}`}>
-        <button className={styles.btn} disabled={checkAvailability()}>
-          گرفتن نوبت
-        </button>
+      <Link
+        href={`/doctors/${id!}`}
+        className={clsx(
+          styles.bookButton,
+          checkAvailability() && styles.disabled,
+        )}
+      >
+        گرفتن نوبت
       </Link>
     </section>
   );

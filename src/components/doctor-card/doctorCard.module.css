@@ -3,7 +3,7 @@
   border: 1px solid var(--color-gray-80);
   background-color: light-dark(var(--color-gray-98), var(--color-gray-40));
   padding: 1rem 0.5rem;
-  margin-bottom: 1rem;
+  margin-block-end: 1rem;
 
   box-shadow: 0 0 10px var(--color-gray-10);
 
@@ -29,36 +29,20 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       gap: 1rem;
       width: 100%;
-      padding: 0 0.3rem 0 1rem;
+      padding-inline: 0.3125rem 1rem;
 
-      .rating {
-        display: flex;
-        align-items: baseline;
-        font-size: 1rem;
-        justify-content: flex-end;
-        min-width: 125px;
-        margin-bottom: 0.5rem;
-
-        .average {
-          margin: 0 0.2rem 0 0.5rem;
-          color: var(--color-primary);
-        }
-
-        .totalVotes {
-          color: light-dark(
-            var(--color-gray-10),
-            var(--color-primary-contrast)
-          );
-        }
+      .username {
+        font-size: 1.25rem;
       }
     }
   }
 
   .address {
     display: flex;
-    gap: 0.3rem;
+    gap: 0.3125rem;
     margin: 1rem 0;
   }
 
@@ -84,25 +68,29 @@
     }
   }
 
-  .btn {
-    background-color: var(--color-primary);
-    width: 100%;
-    color: var(--color-primary-contrast);
+  .bookButton {
+    display: block;
     padding: 0.5rem 1rem;
+
+    background-color: var(--color-primary);
+    color: var(--color-primary-contrast);
+
     border: 1px solid currentColor;
     border-radius: var(--border-radius);
+
     cursor: pointer;
+
+    text-align: center;
     font-weight: 800;
 
     &:hover {
       background-color: var(--color-primary-dark);
       color: var(--color-primary-opposite);
     }
-
-    &:disabled {
-      background-color: var(--color-gray-30);
-      color: var(--color-gray-40);
-      cursor: not-allowed;
-    }
+  }
+  .disabled {
+    background-color: var(--color-gray-30);
+    color: var(--color-gray-40);
+    cursor: not-allowed;
   }
 }
