@@ -1,0 +1,82 @@
+.appointment {
+  grid-column: span 1;
+
+  .appointmentBook {
+    display: flex;
+    flex-direction: column;
+
+    .onlineBook {
+      padding: 0 1rem 1rem 1rem;
+
+      border-block-end: 2px solid var(--color-gray-80);
+
+      .onlineBookTitle {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .onlineBookTitleText {
+          color: light-dark(
+            var(--color-gray-10),
+            var(--color-primary-contrast)
+          );
+        }
+      }
+    }
+
+    .onlineBookDetail {
+      padding-block: 0.5rem 0;
+      padding-inline: 0.25rem;
+
+      .social {
+        display: flex;
+        justify-content: space-between;
+
+        .socialTitle {
+          padding: 0.25rem 0.5rem;
+        }
+
+        .socialContent {
+          display: flex;
+
+          .socialContentItem {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            margin-left: 0.5rem;
+            color: var(--color-gray-60);
+
+            & svg {
+              width: 1.25rem;
+              height: 1.25rem;
+              color: var(--color-eita);
+            }
+          }
+        }
+      }
+
+      .onlineBookDescription {
+        padding: 0.25rem 0.25rem 0.25rem 0;
+        color: var(--color-gray-60);
+        font-size: 0.75rem;
+      }
+    }
+  }
+}
+
+.addressDescription {
+  display: flex;
+  flex-direction: column;
+
+  color: var(--color-gray-70);
+
+  .addressTitle {
+    font-weight: 600;
+    color: light-dark(var(--color-gray-10), var(--color-primary-contrast));
+  }
+
+  .addressText {
+    margin-top: 1rem;
+    font-size: 0.75rem;
+  }
+}
