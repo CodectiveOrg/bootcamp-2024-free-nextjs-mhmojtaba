@@ -16,6 +16,7 @@ export const doctorData: DoctorModel[] = [
     degree: "متخصص",
     expertise: "عفونی",
     badges: ["کمترین معطلی"],
+    registerDate: "2021-09-15T00:00:00Z",
   },
   {
     id: "b6ffbd14",
@@ -34,6 +35,7 @@ export const doctorData: DoctorModel[] = [
     degree: "کارشناس ارشد",
     expertise: "زنان، زایمان و نازایی",
     badges: ["کمترین معطلی"],
+    registerDate: "2021-03-20T00:00:00Z",
   },
   {
     id: "61ea57d2",
@@ -50,6 +52,7 @@ export const doctorData: DoctorModel[] = [
     degree: "فلوشیپ",
     expertise: "قلب و عروق",
     badges: [],
+    registerDate: "2022-03-15T00:00:00Z",
   },
   {
     id: "e408016a",
@@ -68,6 +71,7 @@ export const doctorData: DoctorModel[] = [
     degree: "کاردان",
     expertise: "زنان، زایمان و نازایی",
     badges: ["کمترین معطلی"],
+    registerDate: "2022-11-15T00:00:00Z",
   },
   {
     id: "1a8daf37",
@@ -85,6 +89,7 @@ export const doctorData: DoctorModel[] = [
     degree: "متخصص",
     expertise: "زنان، زایمان و نازایی",
     badges: [],
+    registerDate: "2023-01-15T00:00:00Z",
   },
   {
     id: "973ef75f",
@@ -102,6 +107,7 @@ export const doctorData: DoctorModel[] = [
     degree: "کارشناس",
     expertise: "تغذیه",
     badges: ["کمترین معطلی"],
+    registerDate: "2020-04-15T00:00:00Z",
   },
   {
     id: "99ee46ce",
@@ -118,6 +124,7 @@ export const doctorData: DoctorModel[] = [
     degree: "کارشناس",
     expertise: "زنان، زایمان و نازایی",
     badges: ["منتخب پذیرش24", "کمترین معطلی"],
+    registerDate: "2021-02-15T00:00:00Z",
   },
   {
     id: "2b52cf72",
@@ -135,6 +142,7 @@ export const doctorData: DoctorModel[] = [
     degree: "دکترای تخصصی",
     expertise: "طب سنتی",
     badges: ["کمترین معطلی"],
+    registerDate: "2023-06-15T00:00:00Z",
   },
   {
     id: "baeeab42",
@@ -151,6 +159,7 @@ export const doctorData: DoctorModel[] = [
     degree: "دکترای",
     expertise: "پزشک عمومی",
     badges: ["منتخب پذیرش24", "خوش برخورد", "کمترین معطلی"],
+    registerDate: "2020-12-15T00:00:00Z",
   },
   {
     id: "d476e2fd",
@@ -167,6 +176,7 @@ export const doctorData: DoctorModel[] = [
     degree: "کارشناس",
     expertise: "زنان، زایمان و نازایی",
     badges: ["منتخب پذیرش24", "خوش برخورد", "کمترین معطلی"],
+    registerDate: "2020-01-15T00:00:00Z",
   },
   {
     id: "da8a5af6",
@@ -184,6 +194,7 @@ export const doctorData: DoctorModel[] = [
     degree: "کارشناس ارشد",
     expertise: "زنان، زایمان و نازایی",
     badges: ["کمترین معطلی"],
+    registerDate: "2023-01-15T00:00:00Z",
   },
   {
     id: "98577481",
@@ -200,6 +211,7 @@ export const doctorData: DoctorModel[] = [
     degree: "دانشجوی تخصص",
     expertise: "جراحی",
     badges: ["کمترین معطلی"],
+    registerDate: "2023-01-15T00:00:00Z",
   },
   {
     id: "8cec9d31",
@@ -217,6 +229,7 @@ export const doctorData: DoctorModel[] = [
     degree: "کارشناس ارشد",
     expertise: "زنان، زایمان و نازایی",
     badges: ["منتخب پذیرش24", "خوش برخورد", "کمترین معطلی"],
+    registerDate: "2022-02-15T00:00:00Z",
   },
   {
     id: "97421b53",
@@ -234,6 +247,7 @@ export const doctorData: DoctorModel[] = [
     degree: "کارشناس ارشد",
     expertise: "توانبخشی",
     badges: ["منتخب پذیرش24", "خوش برخورد", "کمترین معطلی"],
+    registerDate: "2023-09-15T00:00:00Z",
   },
   {
     id: "a70497d6",
@@ -251,6 +265,7 @@ export const doctorData: DoctorModel[] = [
     degree: "کارشناس",
     expertise: "توانبخشی",
     badges: ["کمترین معطلی"],
+    registerDate: "2020-02-15T00:00:00Z",
   },
   {
     id: "2b8367b3",
@@ -267,6 +282,7 @@ export const doctorData: DoctorModel[] = [
     degree: "کارشناس",
     expertise: "زنان، زایمان و نازایی",
     badges: ["منتخب پذیرش24", "کمترین معطلی"],
+    registerDate: "2024-09-15T00:00:00Z",
   },
   {
     id: "974248f5",
@@ -285,6 +301,7 @@ export const doctorData: DoctorModel[] = [
     degree: "کارشناس",
     expertise: "زنان، زایمان و نازایی",
     badges: ["خوش برخورد", "کمترین معطلی"],
+    registerDate: "2021-11-15T00:00:00Z",
   },
   {
     id: "9ce1d81f",
@@ -301,6 +318,7 @@ export const doctorData: DoctorModel[] = [
     degree: "دانشجوی تخصص",
     expertise: "مغز و اعصاب",
     badges: ["منتخب پذیرش24", "کمترین معطلی"],
+    registerDate: "2022-05-15T00:00:00Z",
   },
   {
     id: "56909296",
@@ -317,6 +335,7 @@ export const doctorData: DoctorModel[] = [
     degree: "کارشناس",
     expertise: "زنان، زایمان و نازایی",
     badges: ["منتخب پذیرش24", "کمترین معطلی"],
+    registerDate: "2021-03-15T00:00:00Z",
   },
   {
     id: "3f9b752a",
@@ -334,5 +353,6 @@ export const doctorData: DoctorModel[] = [
     degree: "متخصص",
     expertise: "زنان، زایمان و نازایی",
     badges: [],
+    registerDate: "2023-04-15T00:00:00Z",
   },
 ];
