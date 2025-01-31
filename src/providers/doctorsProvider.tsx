@@ -42,15 +42,11 @@ export default function DoctorsProvider({
   });
 
   useEffect(() => {
-    dispatch({ type: "SET_LOADING", payload: true });
     dispatch({ type: "SET_DOCTORS", payload: doctors });
-    dispatch({ type: "SET_LOADING", payload: false });
   }, [doctors]);
 
   useEffect(() => {
-    dispatch({ type: "SET_LOADING", payload: true });
     dispatch({ type: "SET_FILTERS", payload: filters });
-    dispatch({ type: "SET_LOADING", payload: false });
   }, [filters]);
 
   return (
