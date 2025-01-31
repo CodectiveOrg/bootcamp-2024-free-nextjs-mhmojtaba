@@ -1,6 +1,6 @@
 import React, { SVGProps } from "react";
 
-export function MingcuteLocation2Line(props: SVGProps<SVGSVGElement>) {
+export default function MingcuteLocation2Line(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -20,4 +20,3 @@ export function MingcuteLocation2Line(props: SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
-export default MingcuteLocation2Line;

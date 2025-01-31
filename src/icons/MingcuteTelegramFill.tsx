@@ -1,6 +1,6 @@
 import React, { SVGProps } from "react";
 
-export function MingcuteTelegramFill(props: SVGProps<SVGSVGElement>) {
+export default function MingcuteTelegramFill(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -19,4 +19,3 @@ export function MingcuteTelegramFill(props: SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
-export default MingcuteTelegramFill;

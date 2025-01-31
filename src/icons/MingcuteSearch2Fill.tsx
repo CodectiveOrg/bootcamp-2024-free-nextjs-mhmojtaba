@@ -1,6 +1,6 @@
 import React, { SVGProps } from "react";
 
-export function MingcuteSearch2Fill(props: SVGProps<SVGSVGElement>) {
+export default function MingcuteSearch2Fill(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -19,4 +19,3 @@ export function MingcuteSearch2Fill(props: SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
-export default MingcuteSearch2Fill;
