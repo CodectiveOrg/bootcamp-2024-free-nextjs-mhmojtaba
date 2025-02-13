@@ -45,5 +45,6 @@
   .copy {
     grid-area: copy;
     text-align: center;
+    font-size: 0.725rem;
   }
 }
