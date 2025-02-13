@@ -32,8 +32,11 @@
       color: var(--color-gray-80);
 
       > li {
-        background-color: var(--color-gray-20);
-        padding: 0.3rem 0.8rem;
+        background-color: light-dark(transparent, var(--color-gray-20));
+        border: light-dark(var(--color-gray-70), transparent) 1px solid;
+        box-shadow: light-dark(var(--shadow-400), transparent);
+        color: light-dark(var(--color-gray-34), var(--color-gray-76));
+        padding: 0.3125rem 0.75rem;
         border-radius: 999rem;
         font-size: var(--fs-300);
       }

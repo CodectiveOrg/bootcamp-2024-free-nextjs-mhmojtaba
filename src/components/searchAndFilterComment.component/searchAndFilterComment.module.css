@@ -1,0 +1,63 @@
+.sortSearchContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  max-width: 100%;
+
+  padding: 1rem;
+
+  border-block-end: 2px solid var(--color-gray-70);
+
+  .sort {
+    margin-top: 0.5rem;
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    gap: 1rem;
+
+    select {
+      width: 100%;
+      padding: 0.5rem 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0.5rem;
+      outline: none;
+      border: 1px solid var(--color-gray-90);
+      color: light-dark(var(--color-gray-10), var(--color-gray-90));
+      cursor: pointer;
+    }
+  }
+
+  .search {
+    margin-top: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-gray-80);
+
+    & input[type="text"] {
+      width: 100%;
+      background: transparent;
+
+      border-width: 0;
+      outline: none;
+      color: light-dark(var(--color-gray-10), var(--color-gray-90));
+
+      & :focus {
+        outline: none;
+      }
+
+      &::placeholder {
+        color: var(--color-gray-30);
+      }
+    }
+  }
+}

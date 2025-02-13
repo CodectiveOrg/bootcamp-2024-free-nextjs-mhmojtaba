@@ -9,14 +9,19 @@ import DoctorCardComponent from "@/components/doctor-card/doctorCard.component";
 import styles from "./doctorsComponent.module.css";
 
 export default function DoctorsComponent(): ReactElement {
-  const { filteredDoctors } = useDoctors();
+  const { filteredDoctors, loading } = useDoctors();
+
   const { currentItems, currentPage, totalPages, setPage } = usePagination({
     items: filteredDoctors,
     pageSize: 7,
   });
 
+  if (loading) {
+    return <div className={styles.loading}>در حال بارگذاری...</div>;
+  }
+
   if (filteredDoctors.length === 0) {
-    return <div className={styles.empty}>هیچ پزشکی یافت نشد</div>;
+    return <div className={styles.notFound}>هیچ پزشکی یافت نشد</div>;
   }
 
   return (

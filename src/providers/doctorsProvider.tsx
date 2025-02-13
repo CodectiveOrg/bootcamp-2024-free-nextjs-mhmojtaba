@@ -16,6 +16,7 @@ import { doctorsReducer } from "@/reducers/doctors.reducer";
 
 type ContextValue = {
   filteredDoctors: DoctorModel[];
+  loading: boolean;
 };
 
 type Props = PropsWithChildren & {
@@ -24,6 +25,7 @@ type Props = PropsWithChildren & {
 
 export const DoctorsContext = createContext<ContextValue>({
   filteredDoctors: [],
+  loading: true,
 });
 
 export default function DoctorsProvider({
@@ -36,6 +38,7 @@ export default function DoctorsProvider({
     allDoctors: doctors,
     filteredDoctors: [],
     filters: {},
+    loading: true,
   });
 
   useEffect(() => {
@@ -47,7 +50,9 @@ export default function DoctorsProvider({
   }, [filters]);
 
   return (
-    <DoctorsContext.Provider value={{ filteredDoctors: state.filteredDoctors }}>
+    <DoctorsContext.Provider
+      value={{ filteredDoctors: state.filteredDoctors, loading: state.loading }}
+    >
       {children}
     </DoctorsContext.Provider>
   );

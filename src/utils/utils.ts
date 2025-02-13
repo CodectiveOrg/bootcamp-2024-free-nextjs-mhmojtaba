@@ -89,3 +89,17 @@ export function doesInclude(item: string, query?: string): boolean {
 
   return item.toLowerCase().includes(query.toLowerCase());
 }
+
+export const getRegistrationDuration = (registerDate: string) => {
+  const now = new Date();
+  const registeredDate = new Date(registerDate);
+  let years = now.getFullYear() - registeredDate.getFullYear();
+  let months = now.getMonth() - registeredDate.getMonth();
+
+  if (months < 0) {
+    years--;
+    months += 12;
+  }
+
+  return { years, months };
+};

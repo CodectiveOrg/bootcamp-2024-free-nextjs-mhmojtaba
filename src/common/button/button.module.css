@@ -1,0 +1,29 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  width: 100%;
+  margin-block: 1.125rem 0.5rem;
+  padding: 0.5rem 1rem;
+
+  background-color: light-dark(var(--color-gray-98), var(--color-primary));
+  color: light-dark(var(--color-primary), var(--color-gray-98));
+  border: light-dark(currentColor, transparent) 1px solid;
+
+  outline: none;
+  border-radius: var(--border-radius);
+
+  cursor: pointer;
+  font-weight: 800;
+
+  &:hover {
+    background-color: var(--color-primary);
+    color: var(--color-primary-opposite);
+  }
+
+  & svg {
+    display: block;
+  }
+}

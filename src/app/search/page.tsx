@@ -5,20 +5,18 @@ import DoctorsComponent from "@/components/doctorsComponent/doctorsComponent.com
 import GlobalSearchBoxComponent from "@/components/global-search-box/globalSearchBoxComponent";
 import FiltersProvider from "@/providers/filters.provider";
 import DoctorsProvider from "@/providers/doctorsProvider";
-import { doctorData } from "@/constants/doctors";
+import { doctorData } from "@/mock/doctors";
 import { SearchParams } from "@/types/types";
 import { generateDefaultFilters } from "@/utils/utils";
 
 import styles from "./page.module.css";
 
 type Props = {
-  searchParams: Promise<SearchParams>;
+  searchParams: SearchParams;
 };
 
-export default async function Page({
-  searchParams,
-}: Props): Promise<ReactElement> {
-  const defaultFilters = generateDefaultFilters(await searchParams);
+export default function Page({ searchParams }: Props): ReactElement {
+  const defaultFilters = generateDefaultFilters(searchParams);
   return (
     <FiltersProvider defaultFilters={defaultFilters}>
       <DoctorsProvider doctors={doctorData}>

@@ -1,26 +1,22 @@
-.loading {
-  background-color: var(--color-gray-16);
+.loading,
+.notFound {
   margin: 5rem auto;
   text-align: center;
+  width: 750px;
 }
 
 .doctor-container {
-  margin: 1rem 1rem;
-  gap: 1rem;
-
+  width: 750px;
   .pagination {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin: 1rem 0;
+    margin-block: 1rem;
 
     .paginationBtn {
       padding: 0.1rem 0.6rem;
       border-radius: 50%;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      -ms-border-radius: 50%;
-      -o-border-radius: 50%;
+
       border: none;
       cursor: pointer;
       &.active {

@@ -1,0 +1,16 @@
+.content {
+  width: 100%;
+  padding: 1rem;
+  max-width: 75rem;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  column-gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .content {
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  }
+}
