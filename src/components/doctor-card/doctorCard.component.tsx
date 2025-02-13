@@ -36,8 +36,8 @@ export default function DoctorCardComponent({
               className={styles.userImage}
               src={image ? `${IMAGE_BASE_URL}/${image}` : ""}
               alt={name}
-              width={100}
-              height={100}
+              width={80}
+              height={80}
             />
           </Link>
           <div className={styles.userInfo}>
@@ -46,7 +46,7 @@ export default function DoctorCardComponent({
                 <div className={styles.username}>{name}</div>
               </Link>
               <Link href={`/doctors/${id!}`}>
-                <p>
+                <p className={styles.brief}>
                   {brief.length > 50
                     ? `${brief.slice(0, 50)} ..........`
                     : brief}

@@ -5,6 +5,7 @@
 
   > li {
     button {
+      font-size: calc(0.75rem + 2px);
       background-color: transparent;
       inline-size: 100%;
       border: none;

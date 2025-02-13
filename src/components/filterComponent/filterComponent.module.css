@@ -1,7 +1,6 @@
 .filter-container {
   background-color: light-dark(var(--color-gray-98), var(--color-gray-30));
-  border: 1px solid light-dark(var(--color-gray-10), var(--color-gray-40));
-  margin: 1rem 1rem;
+  box-shadow: 0 0 10px var(--color-gray-10);
   padding: 0.6rem;
   border-radius: var(--border-radius);
 

@@ -36,7 +36,7 @@ export default function FiltersCardComponent(): ReactElement | null {
   return (
     <CardComponent>
       <div className={styles["filters-summary"]}>
-        <div className={styles.title}>فیلترهای انتخاب‌شده</div>
+        <div className={styles.title}>فیلترهای فعال</div>
 
         <button type="button" onClick={removeAllButtonClickHandler}>
           حذف همه

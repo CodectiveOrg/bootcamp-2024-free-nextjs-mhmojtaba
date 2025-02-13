@@ -1,6 +1,5 @@
 .card {
   border-radius: var(--border-radius);
-  border: 1px solid var(--color-gray-80);
   background-color: light-dark(var(--color-gray-98), var(--color-gray-40));
   padding: 1rem 0.5rem;
   margin-block-end: 1rem;
@@ -37,6 +36,11 @@
       .username {
         font-size: 1.25rem;
       }
+
+      .brief {
+        font-size: 0.75rem;
+        color: light-dark(var(--color-gray-34), var(--color-gray-90));
+      }
     }
   }
 
@@ -49,21 +53,24 @@
   .badges {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     gap: 0.5rem;
     > p {
-      padding: 0.2rem 0.5rem;
+      padding: 0.2rem 0.4rem;
       border: 1px solid var(--color-gray-70);
       border-radius: var(--border-radius);
+      font-size: calc(0.75rem - 1px);
+      text-wrap: nowrap;
     }
   }
 
   .appointment {
     margin-bottom: 0.5rem;
-    font-size: 0.9rem;
+    font-size: calc(0.75rem + 1px);
     > span {
-      color: var(--color-gray-10);
-      font-weight: 900;
+      font-size: calc(0.5rem + 1px);
+      color: light-dark(var(--color-gray-10), var(--color-primary-contrast));
+      font-weight: 500;
       margin-right: 0.2rem;
     }
   }
@@ -75,7 +82,7 @@
     background-color: var(--color-primary);
     color: var(--color-primary-contrast);
 
-    border: 1px solid currentColor;
+    /* border: 1px solid currentColor; */
     border-radius: var(--border-radius);
 
     cursor: pointer;
