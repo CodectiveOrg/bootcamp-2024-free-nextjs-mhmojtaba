@@ -67,6 +67,8 @@
 
 html {
   color-scheme: dark;
+  font-family: "Vazirmatn", system-ui;
+  font-feature-settings: "ss01";
 }
 
 input,
@@ -96,7 +98,6 @@ a {
   text-decoration: none;
 }
 
-/**/
 body {
   background-color: var(--color-default-background);
   transition:
