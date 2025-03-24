@@ -7,7 +7,7 @@ import clsx from "clsx";
 
 import { headerMenuItems } from "@/constants/constants";
 import styles from "./header.module.css";
-import TogglethemeComponent from "../toggleTheme/Toggletheme.component";
+
 
 export default function HeaderComponent(): ReactElement {
   const pathname = usePathname();
@@ -28,8 +28,8 @@ export default function HeaderComponent(): ReactElement {
         </ul>
       </nav>
       <div className={styles.rightSection}>
-        <TogglethemeComponent />
-        <button className={styles.btnLogin}>ورود | ثبت نام</button>
+        
+        <Link href={'/sign-in'} className={styles.btnLogin}>ورود | ثبت نام</Link>
       </div>
     </header>
   );
