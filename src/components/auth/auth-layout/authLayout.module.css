@@ -1,0 +1,96 @@
+.container {
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
+  margin-block: 1rem;
+}
+
+.logoContainer {
+  padding: 1.5rem 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.authContainer {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: stretch;
+  border: 1px solid var(--color-gray-70);
+  border-radius: var(--border-radius);
+}
+
+.imageRight {
+  flex-direction: row-reverse;
+}
+
+.imageLeft {
+  flex-direction: row;
+}
+
+.formSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.formHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: var(--text-color-light);
+}
+
+.imageSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color-alt);
+  overflow: hidden;
+}
+
+.authImage {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .authContainer {
+    flex-direction: column;
+  }
+
+  .imageSection {
+    display: none;
+  }
+
+  .formSection {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+}
