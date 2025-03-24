@@ -10,7 +10,7 @@
     "Prettier:fix": "prettier . --write ",
     "Prettier:check": "prettier . --check"
   },
-  "prisma":{
+  "prisma": {
     "seed": "tsx prisma/seed.ts"
   },
   "dependencies": {

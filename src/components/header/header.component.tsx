@@ -8,7 +8,6 @@ import clsx from "clsx";
 import { headerMenuItems } from "@/constants/constants";
 import styles from "./header.module.css";
 
-
 export default function HeaderComponent(): ReactElement {
   const pathname = usePathname();
   return (
@@ -28,8 +27,9 @@ export default function HeaderComponent(): ReactElement {
         </ul>
       </nav>
       <div className={styles.rightSection}>
-        
-        <Link href={'/sign-in'} className={styles.btnLogin}>ورود | ثبت نام</Link>
+        <Link href={"/sign-in"} className={styles.btnLogin}>
+          ورود | ثبت نام
+        </Link>
       </div>
     </header>
   );

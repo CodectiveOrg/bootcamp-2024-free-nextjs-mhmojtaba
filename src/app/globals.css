@@ -46,8 +46,7 @@
     0 8px 10px -6px rgb(0 0 0 / 0.1);
   --shadow-900: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 
-  --shadow: 0 0 10px
-    var(--color-gray-10);
+  --shadow: 0 0 10px var(--color-gray-10);
 }
 
 /*css reset*/
@@ -117,7 +116,7 @@ body {
   .tag {
     background-color: transparent;
     color: var(--color-gray-34);
-    border-block:var(--color-gray-34) 1px solid;
+    border-block: var(--color-gray-34) 1px solid;
     text-shadow: var(--shadow-500);
     padding-block: 0.75rem;
     text-align: center;
