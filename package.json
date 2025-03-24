@@ -10,6 +10,9 @@
     "Prettier:fix": "prettier . --write ",
     "Prettier:check": "prettier . --check"
   },
+  "prisma":{
+    "seed": "tsx prisma/seed.ts"
+  },
   "dependencies": {
     "@neondatabase/serverless": "^0.10.4",
     "@prisma/client": "^6.5.0",
