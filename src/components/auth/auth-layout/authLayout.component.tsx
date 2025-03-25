@@ -1,6 +1,6 @@
 import { ReactElement, ReactNode } from "react";
 import Image from "next/image";
-import AuthImage from "@/assets/images/auth-image.png";
+import AuthImage from "@/assets/Images/auth-image.png";
 import styles from "./authLayout.module.css";
 import clsx from "clsx";
 
