@@ -1,5 +1,5 @@
 .footer {
-  background-color: var(--color-default-background);
+  background-color: var(--color-default-forground);
   display: grid;
   grid-template-areas: "wiriting visuals" "copy copy";
   column-gap: 2rem;
